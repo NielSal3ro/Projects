@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="beige_light">#F5F5DC</color>
+    <color name="beige_dark">#D2B48C</color>
+    <color name="accent_orange">#FFA726</color>
+    <color name="accent_green">#66BB6A</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="button_brown">#9D825D</color>
+    <color name="error_red">#D32F2F</color>
+</resources>

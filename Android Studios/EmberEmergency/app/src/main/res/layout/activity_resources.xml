@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Resources"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/arrow_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- State and County Office -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/stateAndCountyCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <!-- Image Background -->
+                    <ImageView
+                        android:id="@+id/stateAndCountyImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/state_county"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="State and County Office" />
+
+                    <!-- Text -->
+                    <TextView
+                        android:id="@+id/stateAndCountyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="State and County Office"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#80000000" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Legal -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/legalCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/stateAndCountyCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <!-- Image Background -->
+                    <ImageView
+                        android:id="@+id/legalImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/legal"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Legal" />
+
+                    <!-- Text -->
+                    <TextView
+                        android:id="@+id/legalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Legal"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#80000000" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Food -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/foodCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/legalCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <!-- Image Background -->
+                    <ImageView
+                        android:id="@+id/foodImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/food"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Food" />
+
+                    <!-- Text -->
+                    <TextView
+                        android:id="@+id/foodText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Food"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#80000000" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Housing -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/housingCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/foodCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <!-- Image Background -->
+                    <ImageView
+                        android:id="@+id/housingImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/housing"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Housing" />
+
+                    <!-- Text -->
+                    <TextView
+                        android:id="@+id/housingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Housing"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#80000000" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Other Non-Profit Organizations -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/otherNonProfitCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/housingCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <!-- Image Background -->
+                    <ImageView
+                        android:id="@+id/otherNonProfitImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/other_non_profit"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Other Non-Profit Organizations" />
+
+                    <!-- Text -->
+                    <TextView
+                        android:id="@+id/otherNonProfitText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Other Non-Profit Organizations"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:background="#80000000" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/button_brown"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/beige_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Image & Title -->
+            <ImageView
+                android:id="@+id/imgProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Product Image" />
+
+            <TextView
+                android:id="@+id/tvProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp" />
+
+            <!-- Biodegradable -->
+            <TextView
+                android:id="@+id/tvBiodegradable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biodegradable:"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp" />
+            <!-- GHG Emissions -->
+            <TextView
+                android:id="@+id/tvGhG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GHG Emissions:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <!-- Water Use -->
+            <TextView
+                android:id="@+id/tvWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Water Use:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <!-- Human Hours -->
+            <TextView
+                android:id="@+id/tvHumanHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Human Hours:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <!-- Machine Hours -->
+            <TextView
+                android:id="@+id/tvMachineHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Machine Hours:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <!-- Add Impact button -->
+            <Button
+                android:id="@+id/btnAddImpact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_brown"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
